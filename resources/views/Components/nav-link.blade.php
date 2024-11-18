@@ -1,9 +1,17 @@
-<<<<<<< HEAD
-<a 
-{{ $attributes }} 
-class=" rounded-md px-3 py-2 font-medium" >
-  {{ $slot }}
-</a>
-=======
-<a {{ $attributes }} class="rounded-md px-3 py-2 font-medium" >{{ $slot }}</a>
->>>>>>> step
+@props(['active' => false,'type' => 'a'])
+
+@if($true == 'a')
+  <a  
+  class=" {{ $active ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}} rounded-md px-3 py-2 font-medium" 
+  aria-page="{{ $active ? 'page' : 'false'}}"
+  {{ $attributes }}>
+  {{ $slot }} 
+  </a>
+@else
+  <button  
+  class=" {{ $active ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}} rounded-md px-3 py-2 font-medium" 
+  aria-page="{{ $active ? 'page' : 'false'}}"
+  {{ $attributes }}>
+  {{ $slot }} 
+  </button>
+@endif
