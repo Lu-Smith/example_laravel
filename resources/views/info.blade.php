@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>I am a Info Page</h1>
-</body>
-</html>
+<x-layout>
+  <h1>Hello from my Info Page</h1>
+</x-layout>
