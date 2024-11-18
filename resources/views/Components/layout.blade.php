@@ -18,10 +18,10 @@
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <x-nav-link href="/" class="{{ request()->is('/') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}} text-sm">Home</x-nav-link>
-                <x-nav-link href="/about" class="{{ request()->is('about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}} text-sm" >About</x-nav-link>
-                <x-nav-link href="/contact" class="{{ request()->is('contact') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}} text-sm" >Contact</x-nav-link>
-                <x-nav-link href="/info" class="{{ request()->is('info') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}} text-sm" >Info</x-nav-link>
+                <x-nav-link href="/" :active="request()->is('/')" class="text-sm" type="a" >Home</x-nav-link>
+                <x-nav-link href="/about" :active="request()->is('about')"  class="text-sm" type="a" >About</x-nav-link>
+                <x-nav-link href="/contact" :active="request()->is('contact')" class="text-sm" type="a" >Contact</x-nav-link>
+                <x-nav-link href="/info" :active="request()->is('info')" class="text-sm" type="a" >Info</x-nav-link>
               </div>
             </div>
           </div>
@@ -69,11 +69,10 @@
       <div class="md:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a href="/" 
-          class="{{ request()->is('/') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}} block text-base" aria-current="page">Home</a>
-          <a href="/about" class="{{ request()->is('about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}} block text-base">About</a>
-          <a href="/contact" class="{{ request()->is('contact') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}} block text-base">Contact</a>
-          <a href="/info" class="{{ request()->is('info') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}} block text-base">Info</a>
+          <x-nav-link href="/" class="block text-base" :active="request()->is('/')" type="a" >Home</x-nav-link>
+          <x-nav-link href="/about" :active="request()->is('about')" class="block text-base" type="a" >About</x-nav-link>
+          <x-nav-link href="/contact" :active="request()->is('contact')" class="block text-base" type="a">Contact</x-nav-link>
+          <x-nav-link href="/info" :active="request()->is('info')" class="block text-base" type="a">Info</x-nav-link>
         </div>
         <div class="border-t border-gray-700 pb-3 pt-4">
           <div class="flex items-center px-5">
