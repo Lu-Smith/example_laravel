@@ -3,7 +3,19 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home', [
+    return view('home');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/jobs', function () {
+    return view('jobs', [
         'jobs' => [
             [
                 'title' => 'Director',
@@ -19,16 +31,4 @@ Route::get('/', function () {
             ]
         ]
     ]);
-});
-
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::get('/info', function () {
-    return view('info');
 });
