@@ -21,3 +21,4 @@ class JobListingsSeeder extends Seeder
         ]);
     }
 }
+
