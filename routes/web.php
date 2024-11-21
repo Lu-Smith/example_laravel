@@ -19,6 +19,10 @@ Route::get('/jobs', function ()  {
     return view('jobs', ['jobs' => Job::all()]);
 });
 
+Route::get('/posts', function ()  {
+    return view('posts');
+});
+
 
 Route::get('/jobs/{id}', function ($id)  {
    
