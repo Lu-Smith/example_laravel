@@ -20,8 +20,9 @@
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <x-nav-link href="/" :active="request()->is('/')" class="text-sm" type="a" >Home</x-nav-link>
                 <x-nav-link href="/about" :active="request()->is('about')"  class="text-sm" type="a" >About</x-nav-link>
-                <x-nav-link href="/contact" :active="request()->is('contact')" class="text-sm" type="a" >Contact</x-nav-link>
+                <x-nav-link href="/posts" :active="request()->is('posts')" class="text-sm" type="a" >Posts</x-nav-link>
                 <x-nav-link href="/jobs" :active="request()->is('jobs')" class="text-sm" type="a" >Jobs</x-nav-link>
+                <x-nav-link href="/contact" :active="request()->is('contact')" class="text-sm" type="a" >Contact</x-nav-link>
               </div>
             </div>
           </div>
@@ -71,8 +72,9 @@
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
           <x-nav-link href="/" class="block text-base" :active="request()->is('/')" type="a" >Home</x-nav-link>
           <x-nav-link href="/about" :active="request()->is('about')" class="block text-base" type="a" >About</x-nav-link>
-          <x-nav-link href="/contact" :active="request()->is('contact')" class="block text-base" type="a">Contact</x-nav-link>
+          <x-nav-link href="/posts" :active="request()->is('posts')" class="block text-base" type="a" >Posts</x-nav-link>
           <x-nav-link href="/jobs" :active="request()->is('jobs')" class="block text-base" type="a">Jobs</x-nav-link>
+          <x-nav-link href="/contact" :active="request()->is('contact')" class="block text-base" type="a">Contact</x-nav-link>
         </div>
         <div class="border-t border-gray-700 pb-3 pt-4">
           <div class="flex items-center px-5">
